@@ -10,11 +10,11 @@
             integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     </head>
 
-    <body class="bg-secondary">
-        <center class="text-bg-primary bg-gradient  p-5">
+    <body class="bg-secondary mx-5">
+        <center class="text-bg-primary bg-gradient p-5">
             <h1 class="display-5 fw-medium">Chapter 12-13</h1>
             <h1 class="display-6 fw-normal">IF…ELSE & ELSE IF STATEMENT,
-            TESTING SET OF CONDITIONS</h1>
+                TESTING SET OF CONDITIONS</h1>
         </center>
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
@@ -27,7 +27,29 @@
                 <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>var userName;</p>
+                        <p>Code:<br>var input = document.getElementById("q1IN").value, type;<br>
+                            if (typeof (+input) === "number" && !(isNaN(+input))) {<br>
+                            type = "Number";<br>
+                            } else {<br>
+                            var ASCII = input.charCodeAt()<br>
+                            if (ASCII > 64 && ASCII < 91) {<br> type="Uppercase letter" ;<br> } else if (ASCII> 96 &&
+                                ASCII < 123) {<br> type="Lowercase letter"
+                                    ;<br> } else {<br> type="Not a Letter or Number" ;<br> } }
+                                    <br>document.getElementById("q1OP").innerHTML=type;</p>
+                        <div class="d-grid gap-2">
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Input:</span>
+                                <input type="text" class="form-control col-2" placeholder="Write any one Character"
+                                    id="q1IN" maxlength="1">
+                                <span class="col-9"></span>
+                            </div>
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Output:</span>
+                                <span class="form-control col-2" id="q1OP"></span>
+                                <span class="col-9"></span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary" onclick="question1()">Execute</button>
                     </div>
                 </div>
             </div>
@@ -41,7 +63,30 @@
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>var myName = "Muhammad Sameed Fayiz";</p>
+                        <p>Code:<br>var input1 = +document.getElementById("q2IN1").value, input2 =
+                            +document.getElementById("q2IN2").value, text;<br>
+                            if (input1 > input2) {<br>
+                            text = `Number ${input1} is larger`;<br>
+                            } else if (input2 > input1) {<br>
+                            text = `Number ${input2} is larger`;<br>
+                            } else if (input1 === input2) {<br>
+                            text = "Both numbers are equal";<br>
+                            }<br>
+                            document.getElementById("q2OP").innerHTML = text;</p>
+                        <div class="d-grid gap-2">
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Input:</span>
+                                <input type="number" class="form-control col-1" placeholder="Number 1" id="q2IN1">
+                                <input type="number" class="form-control col-1" placeholder="Number 2" id="q2IN2">
+                                <span class="col-9"></span>
+                            </div>
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Output:</span>
+                                <span class="form-control col-2" id="q2OP"></span>
+                                <span class="col-9"></span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary" onclick="question2()">Execute</button>
                     </div>
                 </div>
             </div>
@@ -56,8 +101,28 @@
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>var message;<br>message = "Hello World";<br>
-                            alert(message);</p>
+                        <p>Code:<br>var input = +document.getElementById("q3IN").value, text;<br>
+                            if (input > 0) {<br>
+                            text = `Number is positive`;<br>
+                            } else if (0 > input) {<br>
+                            text = `Number is negative`;<br>
+                            } else {<br>
+                            text = "Its a Zero";<br>
+                            }<br>
+                            document.getElementById("q3OP").innerHTML = text;</p>
+                        <div class="d-grid gap-2">
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Input:</span>
+                                <input type="number" class="form-control col-2" placeholder="Write an Integer"
+                                    id="q3IN">
+                                <span class="col-9"></span>
+                            </div>
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Output:</span>
+                                <span class="form-control col-2" id="q3OP"></span>
+                                <span class="col-9"></span>
+                            </div>
+                        </div>
                         <button type="button" class="btn btn-outline-primary" onclick="question3()">Execute</button>
                     </div>
                 </div>
@@ -73,11 +138,27 @@
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>
-                            var name = "Sameed Fayiz", age = "19", field = "Web Dev";<br>
-                            alert(name);<br>
-                            alert(age + " years old");<br>
-                            alert(field);</p>
+                        <p>Code:<br>var input = document.getElementById("q4IN").value.toLowerCase(), vowel = ["a", "e",
+                            "i", "o", "u"], found;<br>
+                            if (vowel.includes(input)) {<br>
+                            found = true;<br>
+                            } else {<br>
+                            found = false;<br>
+                            }<br>
+                            document.getElementById("q4OP").innerHTML = found;</p>
+                        <div class="d-grid gap-2">
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Input:</span>
+                                <input type="text" class="form-control col-2" placeholder="Write a Character" id="q4IN"
+                                    maxlength="1">
+                                <span class="col-9"></span>
+                            </div>
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Output:</span>
+                                <span class="form-control col-2" id="q4OP">Returns true if it is a vowel</span>
+                                <span class="col-9"></span>
+                            </div>
+                        </div>
                         <button type="button" class="btn btn-outline-primary" onclick="question4()">Execute</button>
                     </div>
                 </div>
@@ -93,9 +174,31 @@
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>var food = "Pizza";<br>
-                            alert(`${food.slice(0, 5)}\n${food.slice(0, 4)}\n${food.slice(0, 3)}\n${food.slice(0,
-                            2)}\n${food.slice(0, 1)}`);</p>
+                        <p>Code:<br>var correctPassword = document.getElementById("q5IN1").value;<br>
+                            var userPassword = document.getElementById("q5IN2").value;<br>
+                            if (userPassword === "" || correctPassword === "") {<br>
+                            document.getElementById("q5OP").innerHTML = "Please enter your password";<br>
+                            } else if (userPassword === correctPassword) {<br>
+                            document.getElementById("q5OP").innerHTML = "Correct! The password you entered matches the
+                            original password.";<br>
+                            } else {<br>
+                            document.getElementById("q5OP").innerHTML = "Incorrect password.";<br>
+                            }</p>
+                        <div class="d-grid gap-2">
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Input:</span>
+                                <input type="text" class="form-control col-2" placeholder="Enter your Password"
+                                    id="q5IN1" maxlength="16">
+                                <input type="text" class="form-control col-2" placeholder="Confirm your Password"
+                                    id="q5IN2" maxlength="16">
+                                <span class="col-7"></span>
+                            </div>
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Output:</span>
+                                <span class="form-control col-4" id="q5OP">Password Validator</span>
+                                <span class="col-7"></span>
+                            </div>
+                        </div>
                         <button type="button" class="btn btn-outline-primary" onclick="question5()">Execute</button>
                     </div>
                 </div>
@@ -110,9 +213,15 @@
                 <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>var email = "example@example.com";<br>
-                            alert("My Email Address is " + email);</p>
-                        <button type="button" class="btn btn-outline-primary" onclick="question6()">Execute</button>
+                        <p>Code:<br>This if/else statement does not work. Try to fix it: <br>
+                            var greeting;<br>
+                            var hour = 13;<br>
+                            if (hour < 18) {<br> greeting="Good day" ;<br> else<br> greeting="Good evening" ; }<br>
+                                <b>Correction:</b><br>
+                                var greeting;<br>
+                                var hour = 13;<br>
+                                if (hour < 18) { greeting="Good day" ;<br> } else {<br> greeting="Good evening" ; }
+                        </p>
                     </div>
                 </div>
             </div>
@@ -127,43 +236,30 @@
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>var book = "A smarter way to learn JavaScript";<br>
-                            alert("I am trying to learn from the book " + book);</p>
+                        <p>Code:<br>var time = document.getElementById("q7IN").value;<br>
+                        let hour = parseInt(time.substring(0, 2));<br>
+                        let minute = time.substring(2);<br>
+                        let meridian;<br>
+                        
+                        if (hour === 0) {<br>
+                        hour = 12;<br>
+                        meridian = "AM";<br>
+                        } else if (hour < 12) {<br> meridian="AM" ; <br>} else if (hour===12) { <br>meridian="PM" ; <br>} else { <br>hour=hour - 12; <br>meridian="PM" ;<br>
+                            }<br> var formattedTime=`${hour}:${minute} ${meridian}`;<br> document.getElementById("q7OP").innerHTML=`The time in 12-hour
+                            clock format is: ${formattedTime}`</p>
+                        <div class="d-grid gap-2">
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Input:</span>
+                                <input type="number" class="form-control col-2" placeholder="Write here" id="q7IN" maxlength="4" max="2400" min="0000">
+                                <span class="col-9">Enter the time in 24-hour clock format (e.g. 1900 for 7pm):</span>
+                            </div>
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Output:</span>
+                                <span class="form-control col-2" id="q7OP"></span>
+                                <span class="col-9"></span>
+                            </div>
+                        </div>
                         <button type="button" class="btn btn-outline-primary" onclick="question7()">Execute</button>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseEigth" aria-expanded="false" aria-controls="flush-collapseEigth">
-                        Question 8
-                    </button>
-                </h2>
-                <div id="flush-collapseEigth" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <!-- Body -->
-                        <p>Code:<br>var text = "Yah!, I can write HTML content through JavaScript";<br>
-                            document.write(text)</p>
-                        <button type="button" class="btn btn-outline-primary" onclick="question8()">Execute</button>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-                        Question 9
-                    </button>
-                </h2>
-                <div id="flush-collapseNine" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <!-- Body -->
-                        <p>Code:<br>var design = "▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬";<br>
-                            alert(design);</p>
-                        <button type="button" class="btn btn-outline-primary" onclick="question9()">Execute</button>
                     </div>
                 </div>
             </div>
