@@ -314,7 +314,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item mb-5">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapse14" aria-expanded="false" aria-controls="flush-collapse14">
@@ -324,45 +324,61 @@
                 <div id="flush-collapse14" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br></p>
-                        <table>
-                            <tr>
-                                <th>Subject</th>
-                                <th>Total Marks</th>
-                                <th>Obtained Marks</th>
-                                <th>Percentage</th>
-                            </tr>
-                            <tr>
-                                <td>English</td>
-                                <td>100</td>
-                                <td><input type="number" name="" id="tRowIn1"></td>
-                                <td id="tRowOp1"></td>
-                            </tr>
-                            <tr>
-                                <td>Maths</td>
-                                <td>100</td>
-                                <td><input type="number" name="" id="tRowIn2"></td>
-                                <td id="tRowOp2"></td>
-                            </tr>
-                            <tr>
-                                <td>Urdu</td>
-                                <td>100</td>
-                                <td><input type="number" name="" id="tRowIn3"></td>
-                                <td id="tRowOp3"></td>
-                            </tr>
-                            <tr>
-                                <td>Total</td>
-                                <td>300</td>
-                                <td id="tRowT1"></td>
-                                <td id="tRowT2"></td>
-                            </tr>
+                        <p>Code:<br>sub1 = parseInt(document.getElementById("tRowIn1").value);<br>
+                        sub2 = parseInt(document.getElementById("tRowIn2").value);<br>
+                        sub3 = parseInt(document.getElementById("tRowIn3").value);<br>
+                        document.getElementById("tRowT1").innerHTML = sub1 + sub2 + sub3;<br>
+                        document.getElementById("tRowOp1").innerHTML = sub1 + "%";<br>
+                        document.getElementById("tRowOp2").innerHTML = sub2 + "%";<br>
+                        document.getElementById("tRowOp3").innerHTML = sub3 + "%";<br>
+                        document.getElementById("tRowT2").innerHTML = (sub1 + sub2 + sub3) / 3 + '%';</p>
+                        <!-- table  -->
+                        <table class="table table-primary table-striped">
+                            <thead>
+                                <tr class="table-dark">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Total Marks</th>
+                                    <th scope="col">Obtained Marks</th>
+                                    <th scope="col">Percentage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>English</td>
+                                    <td>100</td>
+                                    <td><input type="number" name="" id="tRowIn1"></td>
+                                    <td id="tRowOp1"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Maths</td>
+                                    <td>100</td>
+                                    <td><input type="number" name="" id="tRowIn2"></td>
+                                    <td id="tRowOp2"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Urdu</td>
+                                    <td>100</td>
+                                    <td><input type="number" name="" id="tRowIn3"></td>
+                                    <td id="tRowOp3"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>Total</td>
+                                    <td>300</td>
+                                    <td id="tRowT1"></td>
+                                    <td id="tRowT2"></td>
+                                </tr>
+                            </tbody>
                         </table>
                         <button type="button" class="btn btn-outline-primary" onclick="question14()">Execute</button>
                     </div>
                 </div>
             </div>
         </div>
-        <hr>
         <script src="app.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

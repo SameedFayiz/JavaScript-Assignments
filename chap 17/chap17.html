@@ -5,15 +5,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Chapter 2</title>
+        <title>Chapter 17-20</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     </head>
 
     <body class="bg-secondary mx-5">
         <center class="text-bg-primary bg-gradient p-5">
-            <h1 class="display-5 fw-medium">Chapter 2</h1>
-            <h1 class="display-6 fw-normal">VARIABLES FOR STRINGS</h1>
+            <h1 class="display-5 fw-medium">Chapter 17-20</h1>
+            <h1 class="display-6 fw-normal">ARRAYS AND LOOP</h1>
         </center>
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
@@ -26,7 +26,9 @@
                 <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>var userName;</p>
+                        <p>Code:<br>Initialize an empty multidimensional array<br>
+                            var array = [[],[],[],[]]
+                        </p>
                     </div>
                 </div>
             </div>
@@ -40,7 +42,10 @@
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>var myName = "Muhammad Sameed Fayiz";</p>
+                        <p>Code:<br>Multidimensional array
+                            representing the following matrix:<br>
+                            var array = [[0, 1, 2, 3], [1, 0, 1, 2], [2, 1, 0, 1]]
+                        </p>
                     </div>
                 </div>
             </div>
@@ -55,9 +60,20 @@
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>var message;<br>message = "Hello World";<br>
-                            alert(message);</p>
-                        <button type="button" class="btn btn-outline-primary" onclick="question3()">Execute</button>
+                        <p>Code:<br></p>
+                        <div class="d-grid gap-2">
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-3">Print integers from 1 to 10</span>
+                                <span class="col-9"></span>
+                            </div>
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Output:</span>
+                                <span class="form-control col-2" id="q3OP"></span>
+                                <span class="col-9"></span>
+                            </div>
+                        </div>
+                        <button type="button" id="q3btn" class="btn btn-outline-primary"
+                            onclick="question3()">Execute</button>
                     </div>
                 </div>
             </div>
@@ -72,12 +88,24 @@
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>
-                            var name = "Sameed Fayiz", age = "19", field = "Web Dev";<br>
-                            alert(name);<br>
-                            alert(age + " years old");<br>
-                            alert(field);</p>
-                        <button type="button" class="btn btn-outline-primary" onclick="question4()">Execute</button>
+                        <p>Code:<br></p>
+                        <div class="d-grid gap-2">
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Input:</span>
+                                <input type="text" class="form-control col-3"
+                                    placeholder="Enter an integer for its table" id="q4IN1" maxlength="2">
+                                <input type="text" class="form-control col-3"
+                                    placeholder="Enter length of Multiplication table" id="q4IN2" maxlength="2">
+                                <span class="col-6 text-danger" id="q4warn"></span>
+                            </div>
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Output:</span>
+                                <span class="form-control col-6" id="q4OP"></span>
+                                <span class="col-6"></span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary" id="q4btn"
+                            onclick="question4()">Execute</button>
                     </div>
                 </div>
             </div>
@@ -92,9 +120,19 @@
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>var food = "Pizza";<br>
-                            alert(`${food.slice(0, 5)}\n${food.slice(0, 4)}\n${food.slice(0, 3)}\n${food.slice(0,
-                            2)}\n${food.slice(0, 1)}`);</p>
+                        <p>Code:<br></p>
+                        <div class="d-grid gap-2">
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Label</span>
+                                <span class="form-control col-2">Loop on Fruits Array</span>
+                                <span class="col-9"></span>
+                            </div>
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Output:</span>
+                                <span class="form-control col-2" id="q5OP"></span>
+                                <span class="col-9"></span>
+                            </div>
+                        </div>
                         <button type="button" class="btn btn-outline-primary" onclick="question5()">Execute</button>
                     </div>
                 </div>
@@ -109,9 +147,8 @@
                 <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>var email = "example@example.com";<br>
-                            alert("My Email Address is " + email);</p>
-                        <button type="button" class="btn btn-outline-primary" onclick="question6()">Execute</button>
+                        <p>Code:<br>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -126,43 +163,21 @@
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <!-- Body -->
-                        <p>Code:<br>var book = "A smarter way to learn JavaScript";<br>
-                            alert("I am trying to learn from the book " + book);</p>
+                        <p>Code:<br></p>
+                        <div class="d-grid gap-2">
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Input:</span>
+                                <input type="number" class="form-control col-2" placeholder="Write here" id="q7IN"
+                                    maxlength="4" max="2400" min="0000">
+                                <span class="col-9">Enter the time in 24-hour clock format (e.g. 1900 for 7pm):</span>
+                            </div>
+                            <div class="input-group mb-3 row">
+                                <span class="input-group-text col-1">Output:</span>
+                                <span class="form-control col-2" id="q7OP"></span>
+                                <span class="col-9"></span>
+                            </div>
+                        </div>
                         <button type="button" class="btn btn-outline-primary" onclick="question7()">Execute</button>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseEigth" aria-expanded="false" aria-controls="flush-collapseEigth">
-                        Question 8
-                    </button>
-                </h2>
-                <div id="flush-collapseEigth" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <!-- Body -->
-                        <p>Code:<br>var text = "Yah!, I can write HTML content through JavaScript";<br>
-                            document.write(text)</p>
-                        <button type="button" class="btn btn-outline-primary" onclick="question8()">Execute</button>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item mb-5">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-                        Question 9
-                    </button>
-                </h2>
-                <div id="flush-collapseNine" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <!-- Body -->
-                        <p>Code:<br>var design = "▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬";<br>
-                            alert(design);</p>
-                        <button type="button" class="btn btn-outline-primary" onclick="question9()">Execute</button>
                     </div>
                 </div>
             </div>

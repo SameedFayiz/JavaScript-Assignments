@@ -37,6 +37,8 @@ function question3() {
     document.getElementById("q3OP").innerHTML = text;
 }
 function question4() {
+    var btn = document.querySelector("#q4btn");
+    btn.classList.add("disabled");
     var input = document.getElementById("q4IN").value.toLowerCase(), vowel = ["a", "e", "i", "o", "u"], found;
     if (vowel.includes(input)) {
         found = true
@@ -46,9 +48,12 @@ function question4() {
     document.getElementById("q4OP").innerHTML = found;
     setTimeout(() => {
         document.getElementById("q4OP").innerHTML = "Returns true if it is a vowel"
-    }, 3000);
+        btn.classList.remove("disabled")
+    }, 2000);
 }
 function question5() {
+    var btn = document.querySelector("#q5btn");
+    btn.classList.add("disabled");
     var correctPassword = document.getElementById("q5IN1").value;
     var userPassword = document.getElementById("q5IN2").value;
     if (userPassword === "" || correctPassword === "") {
@@ -60,7 +65,8 @@ function question5() {
     }
     setTimeout(() => {
         document.getElementById("q5OP").innerHTML = "Password Validator"
-    }, 5000);
+        btn.classList.remove("disabled")
+    }, 3000);
 }
 
 function question7() {
