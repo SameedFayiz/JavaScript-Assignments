@@ -69,7 +69,6 @@ function rollDice() {
     //set the current class to the randomly generated number
     currentClass = showClass;
     setTimeout(() => {
-        document.getElementById("q3OP").innerHTML = "Absolute Value Generator"
         rollBtn.classList.remove("disabled")
     }, 1500);
 }
